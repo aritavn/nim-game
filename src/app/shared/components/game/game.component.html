@@ -1,0 +1,53 @@
+<div class="game-container">
+  <div class="pc-moves">
+    <span [class.disabled]="gameService.isPlayersTurn">
+      {{ "GAME.PC_MOVE" | translate }}
+    </span>
+    <button
+      (click)="gameService.computerMove()"
+      [disabled]="gameService.isPlayersTurn"
+    >
+      {{ "GAME.PLAY" | translate }}
+    </button>
+  </div>
+
+  <div class="match-container">
+    <div class="row" *ngFor="let heap of gameService.heaps">
+      <app-match *ngFor="let match of [].constructor(heap)"></app-match>
+    </div>
+  </div>
+
+  <div class="player-moves">
+    <span [class.disabled]="!gameService.isPlayersTurn">
+      {{ "GAME.PLAYER_MOVE" | translate }}
+    </span>
+
+    <div
+      class="row"
+      *ngFor="let heap of gameService.heaps; let heapIndex = index"
+    >
+      <button
+        (click)="gameService.removeMatch(heapIndex)"
+        [disabled]="
+          (gameService.selectedHeapRow != undefined &&
+            gameService.selectedHeapRow != heapIndex) ||
+          heap === 0 ||
+          !gameService.isPlayersTurn ||
+          gameService.numberOfMatchesToRemove >=
+            gameService.maxNumberOfMatchesToRemoveAtATime
+        "
+      >
+        {{ "GAME.REMOVE" | translate }}
+      </button>
+    </div>
+
+    <button
+      (click)="gameService.playerMove()"
+      [disabled]="
+        !gameService.isPlayersTurn || gameService.selectedHeapRow === undefined
+      "
+    >
+      {{ "GAME.PLAY" | translate }}
+    </button>
+  </div>
+</div>

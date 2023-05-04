@@ -1,0 +1,31 @@
+{
+  "TITLE": "nim game",
+  "LANDING_PAGE": {
+    "CHOOSE_PLAY_MODE": "choose the play mode",
+    "SIMPLE_SETUP": "simple setup, difficulty:",
+    "CUSTOM_SETUP": "custom setup:",
+    "EASY": "easy",
+    "HARD": "hard",
+    "CUSTOMIZE": "customize",
+    "CANCEL": "cancel",
+    "PLAY": "play",
+    "SET_CUSTOMIZATION": "customize game setup",
+    "HEAPS": "heaps size",
+    "MAX_MATCHES": "maximum number of matches that can be removed at a time"
+  },
+  "PAGE_NOT_FOUND": {
+    "TITLE": "Oops!",
+    "PAGE_NOT_FOUND": "Page not found"
+  },
+  "GAME": {
+    "PC_MOVE": "computer move:",
+    "PLAY": "play",
+    "PLAYER_MOVE": "your move:",
+    "REMOVE": "remove",
+    "GAME_OVER": "game over",
+    "YOU_WON": "congrats, you won!",
+    "YOU_LOST": "sorry, you lost",
+    "REMATCH": "rematch",
+    "BACK_TO_MENU": "back to menu"
+  }
+}

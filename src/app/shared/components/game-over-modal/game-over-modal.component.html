@@ -1,0 +1,19 @@
+<span mat-dialog-title>
+  {{ "GAME.GAME_OVER" | translate }}
+</span>
+
+<div mat-dialog-content>
+  <h3 *ngIf="data.won">{{ "GAME.YOU_WON" | translate }}</h3>
+  <h3 *ngIf="!data.won">{{ "GAME.YOU_LOST" | translate }}</h3>
+</div>
+
+<div mat-dialog-actions>
+  <div class="dialog-buttons">
+    <button mat-button [mat-dialog-close]="false" class="secondary">
+      {{ "GAME.BACK_TO_MENU" | translate }}
+    </button>
+    <button mat-button [mat-dialog-close]="true">
+      {{ "GAME.REMATCH" | translate }}
+    </button>
+  </div>
+</div>

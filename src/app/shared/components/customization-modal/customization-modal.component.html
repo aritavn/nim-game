@@ -1,0 +1,40 @@
+<h3 mat-dialog-title>
+  {{ "LANDING_PAGE.SET_CUSTOMIZATION" | translate }}
+</h3>
+
+<div mat-dialog-content>
+  <form [formGroup]="form">
+    <div>
+      <label for="heaps">
+        {{ "LANDING_PAGE.HEAPS" | translate }}
+      </label>
+      <input type="number" formControlName="heap1" />
+      <input type="number" formControlName="heap2" />
+      <input type="number" formControlName="heap3" />
+    </div>
+    <div>
+      <label for="maxMatches">
+        {{ "LANDING_PAGE.MAX_MATCHES" | translate }}
+      </label>
+      <input id="maxMatches" type="number" formControlName="maxMatches" />
+    </div>
+  </form>
+</div>
+
+<div mat-dialog-actions>
+  <div class="dialog-buttons">
+    <button mat-button [mat-dialog-close]="" class="secondary">
+      {{ "LANDING_PAGE.CANCEL" | translate }}
+    </button>
+    <button
+      mat-button
+      [mat-dialog-close]="{
+        heaps: [form.value.heap1, form.value.heap2, form.value.heap3],
+        maxMatches: form.value.maxMatches
+      }"
+      [disabled]="!form.valid"
+    >
+      {{ "LANDING_PAGE.PLAY" | translate }}
+    </button>
+  </div>
+</div>

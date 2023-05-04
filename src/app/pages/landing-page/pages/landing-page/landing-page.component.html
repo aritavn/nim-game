@@ -1,0 +1,19 @@
+<div>
+  <p>{{ "LANDING_PAGE.CHOOSE_PLAY_MODE" | translate }}</p>
+
+  <div>
+    <span>{{ "LANDING_PAGE.SIMPLE_SETUP" | translate }}</span>
+    <a class="landing-page-button" [routerLink]="['/simple-game', 'easy']">
+      {{ "LANDING_PAGE.EASY" | translate }}
+    </a>
+    <a class="landing-page-button" [routerLink]="['/simple-game', 'hard']">
+      {{ "LANDING_PAGE.HARD" | translate }}
+    </a>
+  </div>
+  <div>
+    <span>{{ "LANDING_PAGE.CUSTOM_SETUP" | translate }}</span>
+    <button class="landing-page-button" (click)="openCustomizationModal()">
+      {{ "LANDING_PAGE.CUSTOMIZE" | translate }}
+    </button>
+  </div>
+</div>

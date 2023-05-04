@@ -1,0 +1,16 @@
+.dialog-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+span,
+h3 {
+  text-align: center;
+}
+
+input,
+label {
+  margin-top: 0.5rem;
+  display: block;
+}
